@@ -83,7 +83,7 @@ function region(map){
         map.fitBounds(e.target.getBounds());
         console.log(e.target.feature.properties.nom)
         geojson.clearLayers()
-        commune(map)
+        commune(map,e.target.feature.properties.nom)
     }
     ///////////////////////////////////////////////////////////////
     geojson = L.geoJson(dep, {
@@ -100,8 +100,11 @@ function region(map){
 }
     ///////////////////////////////////////////////////////////////
 }
-function commune(map){
-        fetch('cantons-34-herault.geojson')
+function commune(map,name){
+        name = name.toLowerCase();
+        name = name.normalize("NFD").replace(/[\u0300-\u036f]/g, "")
+        console.log("departements/"+name+"/communes")
+        fetch("departements/"+name+"/communes")
               .then((response) => {
                 return response.json();
               })
