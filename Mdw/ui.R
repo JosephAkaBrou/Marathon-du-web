@@ -3,7 +3,7 @@ library(shinymaterial)
 
 # Define UI for application that draws a histogram
 shinyUI(material_page(
-    title = "Nixamère le marathon",
+    title = "Nixamere le marathon",
     nav_bar_fixed = TRUE,
     # Place side-nav in the beginning of the UI
     material_side_nav(
