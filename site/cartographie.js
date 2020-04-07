@@ -181,13 +181,38 @@ function commune(map,name){
                 }
          };
 
+function trt(text){
+    text= text.toLowerCase();
+    text = text.replace("'","-");
+    text = text.split(' ').join('-');
+    text = text.normalize("NFD").replace(/[\u0300-\u036f]/g, "");
+    return text
+}
+
 
 function search(map,geojson){
     var keys = [];
-    var s = "Valeins";
-    for(var k in dep.features) keys.push(dep.features[k].properties.nom);
-    var departement = rummage(keys,s);
-    if(departement.localeCompare("None") != 0){
+    var s = trt("hèRault");
+    var departement;
+    var stop = 0;
+    for(var k in dep.features){
+        keys.push(dep.features[k].properties.nom)
+        if(trt(dep.features[k].properties.nom) == s){
+            stop = 1;
+            departement = trt(dep.features[k].properties.nom);
+        }
+    };
+    if(stop == 0){                          
+        departement = rummage(keys,s);
+    }
+    if(stop == 1){
+        try { 
+            geojson2.clearLayers();
+        }catch{}
+        commune(map,departement);
+        map.fitBounds(geojson2.getBounds());
+    }
+    else if(departement != "None"){
         try { 
             geojson2.clearLayers();
         }
@@ -195,23 +220,20 @@ function search(map,geojson){
         var layer;
         commune(map,departement);
         for( var sub in geojson2._layers){
-            if(geojson2._layers[sub].feature.properties.nom == s){
+            if(trt(geojson2._layers[sub].feature.properties.nom) == s){
                 layer = geojson2._layers[sub]._bounds
                 break;
             }
         }
-        console.log("region",layer)
         map.fitBounds(layer);
+        
     }
 }
     
 
 function rummage(keys,s){
         for(var k in keys){
-            keys[k] = keys[k].toLowerCase();
-            keys[k] = keys[k].replace("'","-");
-            keys[k] = keys[k].split(' ').join('-');
-            keys[k] = keys[k].normalize("NFD").replace(/[\u0300-\u036f]/g, "");
+            keys[k] = trt(keys[k]);
             var data = function () {
                 var jsonTemp = null;
                 $.ajax({
@@ -226,7 +248,7 @@ function rummage(keys,s){
             data = JSON.parse(data);
             data = data.features
             for(var sub in data){
-                if( s.localeCompare(data[sub].properties.nom) == 0){
+                if( s == trt(data[sub].properties.nom)){
                     return keys[k]
                 };
             }
