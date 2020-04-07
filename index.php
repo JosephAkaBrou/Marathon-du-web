@@ -19,8 +19,8 @@
 	<section class="container">
 
 
-		<?php require(header.php) ?>
-		
+		<?php require('header.php') ?>
+
 		<div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
 			<main role="main" class="inner cover">
 				<h3 class="cover-heading">La santé sur mon territoire</h3>
