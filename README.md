@@ -13,7 +13,9 @@ Dans le cadre de notre Master Miashs, nous avons eu l'occasion de participer à 
   - Clément Cisterne
   
  <b> Master CNO</b>
-
+  - Joacquim Fischer
+  - Margaux
+  - Thibault
 # Liens utiles
   - Drive : https://drive.google.com/drive/folders/15QzOnYuNrrp2V2qsbVLqoXLeMyc4SUjw
   - Lien du site : https://jojoakabrou.github.io/Mdw/
