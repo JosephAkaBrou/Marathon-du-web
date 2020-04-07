@@ -16,7 +16,7 @@ Dans le cadre de notre Master Miashs, nous avons eu l'occasion de participer à 
 
 # Liens utiles
   - Drive : https://drive.google.com/drive/folders/15QzOnYuNrrp2V2qsbVLqoXLeMyc4SUjw
-  - Lien du site : A venir 
+  - Lien du site : https://jojoakabrou.github.io/Mdw/
 
 # Lancement du projet
   ## Découverte de l'équipe
