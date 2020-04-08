@@ -66,4 +66,4 @@ Nouveaux noms de variables
   
 # Visualisation de données 
 ## Prise en main de l'outils Chart.js
-    ## Création de visualisation cartographique
+## Création de visualisation cartographique
