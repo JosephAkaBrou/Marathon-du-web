@@ -42,7 +42,7 @@ Nouveaux noms de variables
   - Population des moins de 18 ans 2016 > *Pop16_<18*
   - Nombre de chômeurs chez les 15-64 ans (RP) 2016 > *NC16_15_64*
   - Nombre de chômeurs chez les 15-24 ans (RP) 2016 > *NC16_15_24*
-  - Revenu fiscal médian 2016 > *RFM16>*
+  - Revenu fiscal médian 2016 > *RFM16*
   - Population des 65 ans ou plus 2016 > *Pop16_>65*
   - Taux de natalité 2016 > *TN16*
   - Population municipale 2016 > *PM16*
