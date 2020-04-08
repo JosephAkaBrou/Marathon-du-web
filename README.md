@@ -42,8 +42,8 @@ Nouveaux noms de variables
   - Population municipale 2016 > *PM16*
   - Nombre de sites et sols pollués (ou potentiellement pollués) 2019 > *NSP19*
   - Densité de population 2016 > *DP16*
-  - Part de généralistes lib. au 31/12 2019 > *PGP*
-  - Part de généralistes lib. au 31/12 2019 de plus de 60ans > *PGP16_>60*
+  - Part de généralistes lib. au 31/12 2019 > *PGP19*
+  - Part de généralistes lib. au 31/12 2019 de plus de 60ans > *PGP19_>60*
   - Part de chômeurs chez les 15-24 ans (RP) 2016 > *PC16_15_24*
   - Part de chômeurs chez les 24-64 ans (RP) 2016 > *PC16_24_64*
   - Part de population des moins de 18 ans 2016 > *PPop16_<18*
