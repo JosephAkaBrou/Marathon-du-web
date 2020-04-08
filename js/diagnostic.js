@@ -123,11 +123,16 @@ document.getElementById("main1").appendChild(node2);
 document.getElementById("main2").innerHTML = pred
  top = document.getElementById("main2");
 
+fetch("https://api-adresse.data.gouv.fr/search/?q="+input+"&type=street")
+  .then(response => response.json())
+  .then(data => {
+    data = data.features[0].geometry.coordinates
   top.innerHTML += "<br><div class='text-center'><br>"+
     	"<h1> ALLEZ PLUS LOIN AVEC CARTOSANTE </h1><br>"+
     	"<a href='https://sirse.atlasante.fr/#c=indicator' target='_blank'>"+
-    	"<img src='https://media.giphy.com/media/BM0NZ2IUusz8NsAIFj/giphy.gif' /></a></div><br><br>"
-
+    	"<img style='width: 60%;height:60%' src='https://api.mapbox.com/styles/v1/mapbox/streets-v11/static/"+data[0]+","+data[1]+",13,0.00,0.00/1000x600@2x?access_token=pk.eyJ1IjoidGhlby1vcmlvbCIsImEiOiJjazhvYTQ1YWgwMGc1M21sbTVjM3BqeWM4In0.BB4gDDk54hPCKi_FfpOXtw' ><br><br>"
+});
+     
 
 
 	}
