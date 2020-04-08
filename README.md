@@ -48,7 +48,7 @@ Nouveaux noms de variables
   - Part de chômeurs chez les 24-64 ans (RP) 2016 > *PC16_24_64*
   - Part de population des moins de 18 ans 2016 > *PPop16_<18*
   - Part de population des 65 ans ou plus 2016 > *PPop16_>65*
-  - Nombre de résidences principales en HLM 2016 > PNRP16
+  - Nombre de résidences principales en HLM 2016 > *PNRP16*
 
 
 
