@@ -1,0 +1,7 @@
+    ul.smart_autocomplete_container li {
+        list-style: none; 
+        cursor: pointer; 
+        color: white;
+        background-color: #4cd964; 
+        text-align: center;
+}
