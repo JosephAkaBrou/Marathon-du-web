@@ -10,19 +10,19 @@
 		node.setAttribute("id","diagno")         // Create a text node
                               // Append the text to <li>
 document.getElementById("main1").appendChild(node);   
-icone = ["./icone/biberon.svg","./icone/habitants.svg","./icone/habitants2.svg",
-"./icone/hlm.svg","./icone/Médecin.svg","./icone/pollution.svg","./icone/recherche_emploi.svg",
-"./icone/revenus.svg","./icone/under18.svg"]
+  
 indic = "<br><br>"
-for (var i = 0; i < 9; i++) {
-next_indic = "<div class='col-sm-4 ' style='margin-bottom:15px;margin-top:15px;'>"+
-                     "<div class='card-img-top d-flex align-items-center border-secondary rounded shadow-sm' style='background-color: #D8D8D8' '>"+
-            "<div>"+
-                "<img class='img-fluid' src="+ icone[i]+ " style='width: 50px;height: 50px;padding :10px' alt='Card image cap'>"+
-            "</div>"+
-            "<p class='col p-2 m-0' text-center> Indicateur "+ i + "</p>"+
-       " </div>"+
-                        "</div>"
+indicators.forEach(function(elem) { 
+next_indic = 
+
+  "<div class='col-sm-4 ' style='margin-bo ttom:15px;margin-top:15px;'>"+
+    "<div class='card-img-top d-flex align-items-center border-secondary rounded shadow-sm' style='background-color: #D8D8D8' '>"+
+        "<div>"+
+          "<img class='img-fluid' src="+ icones.get(elem)+ " style='width: 50px;height: 50px;padding :10px' alt='Card image cap'>"+
+        "</div>"+
+        "<p class='col p-2 m-0' text-center> "+ ind_names.get(elem) + "</p>"+
+    "</div>"+
+  "</div>";
 
       /*  next_indic =      "<div class='card col-sm-4 w-25' style='margin:15px'>"+
         "<div class='card-img-top d-flex align-items-center bg-light style='background-color: #D8D8D8' '>"+
@@ -36,7 +36,7 @@ next_indic = "<div class='col-sm-4 ' style='margin-bottom:15px;margin-top:15px;'
 
 
 	indic = indic + next_indic
-}
+});
 
 downl = "<br><br><div class='col-sm-4 text-center'style='width: 21.5em;margin:15px auto;'>"+
 "<button type='button' class='btn btn-lg btn-success'>Télécharger l'export PDF </button></div>"

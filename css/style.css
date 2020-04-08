@@ -1,0 +1,8 @@
+	[placeholder] {
+		color: white;
+	}
+	input::-webkit-input-placeholder {
+		color: white !important;
+		text-transform: uppercase;
+		font-size: 25px;
+	}
