@@ -47,7 +47,7 @@ indicators.forEach(function(elem) {
 
 next_indic = 
 
-  "<div class='col-sm-4 ' style='margin-bo ttom:15px;margin-top:15px;'>"+
+  "<div class='col-sm-4 ' style='margin-bottom:15px;margin-top:15px;'>"+
     "<div class='card-img-top d-flex align-items-center border-secondary rounded shadow-sm' style='background-color: #D8D8D8' '>"+
         "<div>"+
           "<img class='img-fluid' src="+ icones.get(elem)+ " style='width: 50px;height: 50px;padding :10px' alt='Card image cap'>"+
