@@ -37,13 +37,15 @@ Dans le cadre de notre Master Miashs, nous avons eu l'occasion de participer à 
 Nouveaux noms de variables
   - Code > *Code*
   - Libellé > *Nom_com*
-  - Nbre de généralistes lib. au 31/12 2019 > *NG19_60>*
-  - Nbre de généralistes lib. au 31/12 2019.1 > *NG19T*
+  - Nbre de généralistes lib. au 31/12 2019 60+ > *NG19_60>*
+  - Nbre de généralistes lib. au 31/12 2019 > *NG19T*
   - Population des moins de 18 ans 2016 > *Pop16_<18*
   - Nombre de chômeurs chez les 15-64 ans (RP) 2016 > *NC16_15_64*
   - Nombre de chômeurs chez les 15-24 ans (RP) 2016 > *NC16_15_24*
+  - Nombre de résidences principales en HLM 2016 > *NRP16*
   - Revenu fiscal médian 2016 > *RFM16*
   - Population des 65 ans ou plus 2016 > *Pop16_>65*
+  - Nombre de résidences principales en HLM 2016
   - Taux de natalité 2016 > *TN16*
   - Population municipale 2016 > *PM16*
 
