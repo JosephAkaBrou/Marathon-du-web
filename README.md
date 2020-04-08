@@ -39,7 +39,7 @@ Nouveaux noms de variables
   - Libellé > *Nom_com*
   - Revenu fiscal médian 2016 > *RFM16*
   - Taux de natalité 2016 > *TN16*
-  - Population municipale 2016 > *PM16*
+  - Part de la population municipale 2016 / Population du département > *PPMsD16*
   - Nombre de sites et sols pollués (ou potentiellement pollués) 2019 > *NSP19*
   - Densité de population 2016 > *DP16*
   - Part de généralistes lib. au 31/12 2019 > *PGP19*
