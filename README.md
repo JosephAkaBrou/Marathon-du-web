@@ -45,7 +45,7 @@ Nouveaux noms de variables
   - Nombre de résidences principales en HLM 2016 > *NRP16*
   - Revenu fiscal médian 2016 > *RFM16*
   - Population des 65 ans ou plus 2016 > *Pop16_>65*
-  - Nombre de résidences principales en HLM 2016
+  - Nombre de résidences principales en HLM 2016 > *NRP16*
   - Taux de natalité 2016 > *TN16*
   - Population municipale 2016 > *PM16*
 
