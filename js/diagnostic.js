@@ -52,7 +52,7 @@ next_indic =
         "<div>"+
           "<img class='img-fluid' src="+ icones.get(elem)+ " style='width: 50px;height: 50px;padding :10px' alt='Card image cap'>"+
         "</div>"+
-        "<p class='col p-2 m-0' text-center> "+ ind_names.get(elem) + "</p>"+
+        "<p class='col p-2 m-0' text-center> "+ ind_names.get(elem) + " " + catalogue[input][elem] + "</p>"+
                   "<svg height='50' width='80'><circle id="+ 'id'+i+" cx='50' cy='25' r='10'  stroke-width='3' fill="+ statut +" /></svg>"+
     "</div>"+
   "</div>"
