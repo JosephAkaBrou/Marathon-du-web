@@ -51,20 +51,32 @@ indicators.forEach(function(elem) {
       list = []
       statut = "grey"
       condition = condition_tab[i]
-      if (condition >  seuil_values.get(elem)) {
-        statut = "green"
-        } else {
-            statut = "orange"
+      if (elem == "NSP19" || elem == "PC16_15_24" || elem == "PC16_24_64" ) {
+              if (condition <=  seuil_values.get(elem)) {
+            statut = "green"
+            } else {
+                statut = "orange"
+          }
+
+      } else {
+
+          if (condition >=  seuil_values.get(elem)) {
+            statut = "green"
+            } else {
+                statut = "orange"
+          }
+
+
       }
-      
-      if (statut == 'red' | statut == 'orange') {
-        list = [ind_names.get(elem),statut,icones.get(elem)]
-        warning_map.set(elem,list)
-      }      
-      if (statut == "green") {
-        list = [ind_names.get(elem),statut,icones.get(elem)]
-        good_map.set(elem,list)
-      }
+                
+          if (statut == 'red' | statut == 'orange') {
+            list = [ind_names.get(elem),statut,icones.get(elem)]
+            warning_map.set(elem,list)
+          }      
+          if (statut == "green") {
+            list = [ind_names.get(elem),statut,icones.get(elem)]
+            good_map.set(elem,list)
+          }
 /*
 next_indic = 
   "<div class='col-sm-4 ' style='margin-bottom:15px;margin-top:15px;'>"+
