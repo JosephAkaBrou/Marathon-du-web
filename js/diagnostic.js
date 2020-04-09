@@ -143,7 +143,6 @@ document.getElementById("warning_diagno").innerHTML = indic
 top.innerHTML += "<br><div class='col-sm-4 text-center'style='width: 21.5em;margin:15px auto;'>"+
 "<button type='button' class='btn btn-lg btn-success'>Télécharger l'export PDF </button></div>"
 
-top.innerHTML += "<br><br><h2 style='text-align: center'> Quelques communes semblables </h1><br><br>"
 var node2 = document.createElement("div");  
 var node3 = document.createElement("div")
 node2.setAttribute("class","row")
@@ -159,7 +158,7 @@ document.getElementById("main1").appendChild(node2);
        
 
 
- voisin = ""
+ voisin = "<br><br><h2 style='text-align: center'> Quelques communes semblables </h1><br>"
     catalogue[input]['Proche_voisin'].forEach(function(valeur) {
       console.log(valeur)
       next_voisin =  
