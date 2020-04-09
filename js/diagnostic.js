@@ -88,7 +88,7 @@ indic += "<div class='row' >"
 good_map.forEach(function(valeur, clé) {
 
           next_indic = 
-            "<div class='col-6' style='margin-bottom:15px;margin-top:15px;'>"+
+            "<div class='col-md-6 col-lg-6 col-12' style='margin-bottom:15px;margin-top:15px;'>"+
               "<div class='card-img-top d-flex align-items-center border-secondary rounded shadow-sm' style='background-color: #D8D8D8' '>"+
                   "<div>"+
                     "<img class='img-fluid' src="+  valeur[1]+ " style='width: 50px;height: 50px;padding :10px' alt='Card image cap'>"+
@@ -121,7 +121,7 @@ indic += "<div class='row' >"
 
 warning_map.forEach(function(valeur, clé) {
           next_indic = 
-            "<div class='col-6' style='margin-bottom:15px;margin-top:15px;'>"+
+            "<div class='col-md-6 col-lg-6 col-12' style='margin-bottom:15px;margin-top:15px;'>"+
               "<div class='card-img-top d-flex align-items-center border-secondary rounded shadow-sm' style='background-color: #D8D8D8' '>"+
                   "<div>"+
                     "<img class='img-fluid' src="+  valeur[1]+ " style='width: 50px;height: 50px;padding :10px' alt='Card image cap'>"+
