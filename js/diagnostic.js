@@ -1,6 +1,9 @@
      function topFunction() {
+      top = document.getElementById("main3");
+      top.innerHTML = ""
   document.body.scrollTop = 0; // For Safari
   document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+
 }
 
 
@@ -23,6 +26,7 @@
 
        //top.removeChild(nested); 
        top.innerHTML = ""
+      top.innerHTML += '<a href="index.html"><img src="icone/logo.png"></a>' 
       top.innerHTML = "<br><h1 style='text-align: center'>Diagnostic de "+ input +"</h1><br><br>"
   
 indic = "<br><br>"
@@ -36,10 +40,10 @@ condition_tab= [catalogue[input].RFM16,catalogue[input].TN16,catalogue[input].PP
                 catalogue[input]['PGP19_>60'],catalogue[input].PC16_15_24,catalogue[input].PC16_24_64,
                 catalogue[input]['PPop16_<18'],catalogue[input]['PPop16_>65'],catalogue[input].PRP16]
 
-
+/*
 condition_tab = [Math.random(),Math.random(),Math.random(),Math.random(),Math.random(),
 Math.random(),Math.random(),Math.random(),Math.random(),
-Math.random(),Math.random(),Math.random()]
+Math.random(),Math.random(),Math.random()] */
 //condition_tab = [5,1,2,-4,5,-7,9,0,1,4,0,-7]
 var warning_map = new Map();
 var good_map = new Map();
@@ -62,9 +66,7 @@ indicators.forEach(function(elem) {
         good_map.set(elem,list)
       }
 /*
-
 next_indic = 
-
   "<div class='col-sm-4 ' style='margin-bottom:15px;margin-top:15px;'>"+
     "<div class='card-img-top d-flex align-items-center border-secondary rounded shadow-sm' style='background-color: #D8D8D8' '>"+
         "<div>"+
@@ -200,9 +202,15 @@ document.getElementById("main1").appendChild(node2);
     })
 
 document.getElementById("main2").innerHTML = voisin
- 
+ /*
+ if(typeof(element) != 'undefined' && element != null){
+        alert('Element exists!');
+    } else{
+        alert('Element does not exist!');
+    } */
 
 top = document.getElementById("main3");
+top.innerHTML = ""
 
 fetch("https://api-adresse.data.gouv.fr/search/?q="+input+"&type=street")
   .then(response => response.json())
@@ -217,7 +225,3 @@ fetch("https://api-adresse.data.gouv.fr/search/?q="+input+"&type=street")
 
 
 	}
-
-
-
-
