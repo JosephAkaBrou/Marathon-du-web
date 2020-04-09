@@ -10,7 +10,7 @@
 
  function check_input(){
   input = document.getElementById('research').value
-    if(input.length > 1 | input.value == "undefined"){
+    if(com.includes(input)){
       getDiagnost(input)
     }else{
      
@@ -156,7 +156,8 @@ document.getElementById("warning_diagno").innerHTML = indic
 
 
 top.innerHTML += "<br><div class='col-sm-4 text-center'style='width: 21.5em;margin:15px auto;'>"+
-"<a href='javascript:demoFromHTML()' class='button'><button type='button' class='btn btn-lg btn-success'> Télécharger l'export PDF </div></a>"
+"<button type='button' class='btn btn-lg btn-success' onclick='demoFromHTML()'>Télécharger l'export PDF </button></div>"
+
 
 var node2 = document.createElement("div");  
 var node3 = document.createElement("div")
