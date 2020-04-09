@@ -6,3 +6,14 @@
 		text-transform: uppercase;
 		font-size: 25px;
 	}
+
+
+#foot{
+    position: relative;
+    text-align: center;
+}
+
+#divfoot{
+   bottom:0;
+   width:100%;
+}
