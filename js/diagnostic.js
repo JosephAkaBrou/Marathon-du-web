@@ -1,6 +1,9 @@
      function topFunction() {
+      top = document.getElementById("main3");
+      top.innerHTML = ""
   document.body.scrollTop = 0; // For Safari
   document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+
 }
 
 
@@ -200,9 +203,15 @@ document.getElementById("main1").appendChild(node2);
     })
 
 document.getElementById("main2").innerHTML = voisin
- 
+ /*
+ if(typeof(element) != 'undefined' && element != null){
+        alert('Element exists!');
+    } else{
+        alert('Element does not exist!');
+    } */
 
 top = document.getElementById("main3");
+top.innerHTML = ""
 
 fetch("https://api-adresse.data.gouv.fr/search/?q="+input+"&type=street")
   .then(response => response.json())
