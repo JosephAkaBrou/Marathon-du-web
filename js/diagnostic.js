@@ -15,35 +15,36 @@
 
        top.removeChild(nested); 
        top.innerHTML = "<br><h1 style='text-align: center'>Diagnostic de "+ input +"</h1><br><br>"
-       var node = document.createElement("div");                 // Create a <li> node
-		node.setAttribute("class","row container-fluid bg-light")
-		node.setAttribute("id","diagno")         // Create a text node
-                              // Append the text to <li>
-document.getElementById("main1").appendChild(node);   
   
+  console.log(" LOL " + Math.random() + Math.random())
 indic = "<br><br>"
 i = 0
-condition_tab = [5,1,2,-4,5,-7,9,0,1,4,0,-7]
+condition_tab = [Math.random(),Math.random(),Math.random(),Math.random(),Math.random(),
+Math.random(),Math.random(),Math.random(),Math.random(),
+Math.random(),Math.random(),Math.random()]
+//condition_tab = [5,1,2,-4,5,-7,9,0,1,4,0,-7]
 var warning_map = new Map();
-
+var good_map = new Map();
 indicators.forEach(function(elem) { 
       list = []
-        statut = "grey"
+      statut = "grey"
       condition = condition_tab[i]
-      if (condition >  0) {
+      if (condition >  0.3) {
         statut = "green"
-        } else if ( condition < 0){
-          statut = "red"
-          } else {
+        } else {
             statut = "orange"
       }
-      id = "id"+i
+      
       if (statut == 'red' | statut == 'orange') {
         list = [statut,icones.get(elem)]
         warning_map.set(ind_names.get(elem),list)
+      }      
+      if (statut == "green") {
+        list = [statut,icones.get(elem)]
+        good_map.set(ind_names.get(elem),list)
       }
 
-
+/*
 
 next_indic = 
 
@@ -52,11 +53,11 @@ next_indic =
         "<div>"+
           "<img class='img-fluid' src="+ icones.get(elem)+ " style='width: 50px;height: 50px;padding :10px' alt='Card image cap'>"+
         "</div>"+
-        "<p class='col p-2 m-0' text-center> "+ ind_names.get(elem) + " " + catalogue[input][elem] + "</p>"+
+        "<p class='col p-2 m-0' text-center> "+ ind_names.get(elem) + "</p>"+
                   "<svg height='50' width='80'><circle id="+ 'id'+i+" cx='50' cy='25' r='10'  stroke-width='3' fill="+ statut +" /></svg>"+
     "</div>"+
   "</div>"
-;
+; */
 
       /*  next_indic =      "<div class='card col-sm-4 w-25' style='margin:15px'>"+
         "<div class='card-img-top d-flex align-items-center bg-light style='background-color: #D8D8D8' '>"+
@@ -66,17 +67,68 @@ next_indic =
             "<p class='col p-2 m-0'>Indicateur "+ i + "</p>"+
        " </div>"+
  " </div>" */
-
-
-
-	indic = indic + next_indic
-  i++;
+	//indic = indic + next_indic
+  i++; 
 });
 
-downl = "<br><br><div class='col-sm-4 text-center'style='width: 21.5em;margin:15px auto;'>"+
+console.log(warning_map.size)
+console.log(good_map.size)
+ top.innerHTML += "<br><h3 style='text-align: center'> Positif </h3><br>"
+    var good_node = document.createElement("div");                 // Create a <li> node
+    good_node.setAttribute("class","row container-fluid bg-light")
+    good_node.setAttribute("id","good_diagno")         // Create a text node
+                              // Append the text to <li>
+document.getElementById("main1").appendChild(good_node); 
+
+good_map.forEach(function(valeur, clé) {
+
+          next_indic = 
+            "<div class='col-sm-4 ' style='margin-bottom:15px;margin-top:15px;'>"+
+              "<div class='card-img-top d-flex align-items-center border-secondary rounded shadow-sm' style='background-color: #D8D8D8' '>"+
+                  "<div>"+
+                    "<img class='img-fluid' src="+  valeur[1]+ " style='width: 50px;height: 50px;padding :10px' alt='Card image cap'>"+
+                  "</div>"+
+                  "<p class='col p-2 m-0' text-center> "+ clé  + "</p>"+
+                            "<svg height='50' width='70'><circle id="+ 'id'+i+" cx='40' cy='25' r='10'  stroke-width='3' fill="+ valeur[0] +" /></svg>"+
+              "</div>"+
+            "</div>"
+          console.log("MDR")
+
+  indic = indic + next_indic
+  i++;
+})
+document.getElementById("good_diagno").innerHTML = indic 
+
+    var warning_diagno = document.createElement("div");                 // Create a <li> node
+    warning_diagno.setAttribute("class","row container-fluid bg-light")
+    warning_diagno.setAttribute("id","warning_diagno")         // Create a text node
+                              // Append the text to <li>
+top.innerHTML  += "<br><br><h3 style='text-align: center'> Axe d'amélioration </h3><br><br>"
+document.getElementById("main1").appendChild(warning_diagno);
+
+indic = ""
+warning_map.forEach(function(valeur, clé) {
+          next_indic = 
+            "<div class='col-sm-4 ' style='margin-bottom:15px;margin-top:15px;'>"+
+              "<div class='card-img-top d-flex align-items-center border-secondary rounded shadow-sm' style='background-color: #D8D8D8' '>"+
+                  "<div>"+
+                    "<img class='img-fluid' src="+  valeur[1]+ " style='width: 50px;height: 50px;padding :10px' alt='Card image cap'>"+
+                  "</div>"+
+                  "<p class='col p-2 m-0' text-center> "+ clé  + "</p>"+
+                            "<svg height='50' width='70'><circle id="+ 'id'+i+" cx='40' cy='25' r='10'  stroke-width='3' fill="+ valeur[0] +" /></svg>"+
+              "</div>"+
+            "</div>"
+  indic = indic + next_indic
+  i++;
+})
+
+
+document.getElementById("warning_diagno").innerHTML = indic 
+
+
+top.innerHTML += "<br><br><div class='col-sm-4 text-center'style='width: 21.5em;margin:15px auto;'>"+
 "<button type='button' class='btn btn-lg btn-success'>Télécharger l'export PDF </button></div>"
 
-document.getElementById("diagno").innerHTML = indic + downl
 top.innerHTML += "<br><br><h2 style='text-align: center'>Prédiction</h1><br><br>"
 var node2 = document.createElement("div");  
 var node3 = document.createElement("div")
@@ -95,9 +147,6 @@ document.getElementById("main1").appendChild(node2);
 
  pred = ""
     warning_map.forEach(function(valeur, clé) {
-      
-
-      console.log(warning_map.size)
 
       next_pred =  "<div class='row'>"+
                                         "<div class='card-img-top d-flex align-items-center border-secondary rounded shadow-sm col-sm-4' style='margin:10px;background-color: #D8D8D8' '>"+
@@ -113,9 +162,6 @@ document.getElementById("main1").appendChild(node2);
                               "</div>"+
                           "<div>"+
                     "</div>"
-
-
-
 
       pred = pred + next_pred
     })
