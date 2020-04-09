@@ -7,13 +7,31 @@
 		font-size: 25px;
 	}
 
-
 #foot{
     position: relative;
     text-align: center;
 }
-
 #divfoot{
    bottom:0;
    width:100%;
+}
+
+[placeholder] {
+    color: white;
+}
+input::-webkit-input-placeholder {
+    color: white !important;
+    text-transform: uppercase;
+    font-size: 25px;
+}
+
+.img-responsive{
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    width: 30%;
+    height: 10%;
+}
+#slogan{
+    margin: 1%;
 }

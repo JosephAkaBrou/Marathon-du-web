@@ -14,7 +14,7 @@
       var nested = document.getElementById("form1");
 
        top.removeChild(nested); 
-       top.innerHTML = "<br><h1 style='text-align: center'>Diagnostic de "+ input +"</h1><br><br>"
+       top.innerHTML = "<br><a href='index.html'><img src='https://www.atlasante.fr/media/site/gen/atlasante/logo-atla-sant-long@2x.png' ></a><h1 style='text-align: center'>Diagnostic de "+ input +"</h1><br><br>"
   
   console.log(" LOL " + Math.random() + Math.random())
 indic = "<br><br>"
