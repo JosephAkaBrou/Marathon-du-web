@@ -51,12 +51,10 @@ Nouveaux noms de variables
   - Part du nombre de résidences principales en HLM 2016 > *PNRP16*
 
 
-
-  
 # Développement d'un tableau de bord
 ## Maquettage de l'applicatif
 ## Récupération et adaptation d'un template
   
 # Visualisation de données 
-## Prise en main de l'outils Chart.js
-## Création de visualisation cartographique
+## Choix des seuils pour les indicateurs 
+## Les communes les plus proches entres elles (https://code.i-harness.com/fr/docs/scikit_learn/modules/neighbors)
