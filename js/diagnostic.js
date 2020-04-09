@@ -36,10 +36,10 @@ condition_tab= [catalogue[input].RFM16,catalogue[input].TN16,catalogue[input].PP
                 catalogue[input]['PGP19_>60'],catalogue[input].PC16_15_24,catalogue[input].PC16_24_64,
                 catalogue[input]['PPop16_<18'],catalogue[input]['PPop16_>65'],catalogue[input].PRP16]
 
-
+/*
 condition_tab = [Math.random(),Math.random(),Math.random(),Math.random(),Math.random(),
 Math.random(),Math.random(),Math.random(),Math.random(),
-Math.random(),Math.random(),Math.random()]
+Math.random(),Math.random(),Math.random()] */
 //condition_tab = [5,1,2,-4,5,-7,9,0,1,4,0,-7]
 var warning_map = new Map();
 var good_map = new Map();
