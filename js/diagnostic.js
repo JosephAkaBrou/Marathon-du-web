@@ -163,7 +163,7 @@ document.getElementById("main1").appendChild(node2);
       console.log(valeur)
       next_voisin =  
           "<div class='row justify-content-center'>"+
-              "<div class='col-8 d-flex align-items-center border-secondary rounded shadow-sm' style='margin:10px;background-color: #D8D8D8' '>"+
+              "<div class='col-sm-12 col-md-8 d-flex align-items-center border-secondary rounded shadow-sm' style='margin:10px;background-color: #D8D8D8' '>"+
                   "<div class='col-4'>"+
                     "<p class='p-3 m-0 font-weight-bold'>  "+ valeur + "</p>"+
                   "</div>"+
