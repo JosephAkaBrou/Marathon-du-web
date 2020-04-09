@@ -129,7 +129,7 @@ document.getElementById("warning_diagno").innerHTML = indic
 top.innerHTML += "<br><br><div class='col-sm-4 text-center'style='width: 21.5em;margin:15px auto;'>"+
 "<button type='button' class='btn btn-lg btn-success'>Télécharger l'export PDF </button></div>"
 
-top.innerHTML += "<br><br><h2 style='text-align: center'>Prédiction</h1><br><br>"
+top.innerHTML += "<br><br><h2 style='text-align: center'> Mes communes semblables</h1><br><br>"
 var node2 = document.createElement("div");  
 var node3 = document.createElement("div")
 node2.setAttribute("class","row")
@@ -145,28 +145,31 @@ document.getElementById("main1").appendChild(node2);
        
 
 
- pred = ""
-    warning_map.forEach(function(valeur, clé) {
+ voisin = ""
+    catalogue[input]['Proche_voisin'].forEach(function(valeur) {
+      console.log(valeur)
+      next_voisin =  
+          "<div class='row'>"+
+              "<div class='card-img-top d-flex align-items-center border-secondary rounded shadow-sm' style='margin:10px;background-color: #D8D8D8' '>"+
+                  "<div class='col-3'>"+
+                    "<p class='p-3 m-0 font-weight-bold'>  "+ valeur + "</p>"+
+                  "</div>"+
+                  "<div class='col-3'>"+
+                    "<p class='p-3 m-0'>  "+ catalogue[valeur]['nom_departement'] + "</p>"+
+                  "</div>"+
 
-      next_pred =  "<div class='row'>"+
-                                        "<div class='card-img-top d-flex align-items-center border-secondary rounded shadow-sm col-sm-4' style='margin:10px;background-color: #D8D8D8' '>"+
-                "<div>"+
-                    "<img class='img-fluid' src="+ valeur[1]+ " style='width: 50px;height: 50px;padding :10px' alt='Card image cap'>"+
-                "</div>"+
-                "<span class='dot' style ='background-color:green'></span>"+
-                "<p class='col p-2 m-0' text-center>  "+ clé + "</p>"+
-                "<svg height='50' width='100'><circle id="+ 'id'+i+" cx='50' cy='25' r='10'  stroke-width='3' fill="+ valeur[0] +" /></svg>"+"</div>"+
-                                    "<span class='text-center col-6 ' style='padding-top: 45px;'> "+
-                                      "Attention ceci est une mise en garde ! Problems are coming !"+
-                                    "</span>"+
-                              "</div>"+
-                          "<div>"+
-                    "</div>"
 
-      pred = pred + next_pred
+                  "<span class='dot' style ='background-color:green'></span>"+
+
+              "</div>"+
+          "</div>"+
+      "<div>"+
+    "</div>"
+
+      voisin = voisin + next_voisin
     })
 
-document.getElementById("main2").innerHTML = pred
+document.getElementById("main2").innerHTML = voisin
  top = document.getElementById("main2");
 
 fetch("https://api-adresse.data.gouv.fr/search/?q="+input+"&type=street")
