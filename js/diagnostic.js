@@ -1,6 +1,5 @@
  function check_input(){
   input = document.getElementById('research').value
-  console.log(input)
     if(input.length > 1 | input.value == "undefined"){
       getDiagnost(input)
     }else{
@@ -18,7 +17,6 @@
        top.removeChild(nested); 
       top.innerHTML = "<br><a href='index.html'><img src='https://www.atlasante.fr/media/site/gen/atlasante/logo-atla-sant-long@2x.png' ></a><h1 style='text-align: center'>Diagnostic de "+ input +"</h1><br><br>"
   
-  console.log(" LOL " + Math.random() + Math.random())
 indic = "<br><br>"
 i = 0
 condition_tab = [Math.random(),Math.random(),Math.random(),Math.random(),Math.random(),
@@ -45,9 +43,6 @@ indicators.forEach(function(elem) {
         list = [ind_names.get(elem),statut,icones.get(elem)]
         good_map.set(elem,list)
       }
-
-console.log(good_map)
-
 /*
 
 next_indic = 
@@ -75,8 +70,6 @@ next_indic =
   i++; 
 });
 
-console.log(warning_map.size)
-console.log(good_map.size)
  //top.innerHTML += 
     var good_node = document.createElement("div");                 // Create a <li> node
     good_node.setAttribute("class","container-fluid bg-light")
@@ -91,7 +84,7 @@ good_map.forEach(function(valeur, clé) {
 
           next_indic = 
             "<div class='col-md-6 col-lg-6 col-12' style='margin-bottom:15px;margin-top:15px;'>"+
-              "<button class='btn-default card-img-top d-flex align-items-center border-secondary rounded shadow-sm' data-toggle='tooltip' data-placement='top' title='"+catalogue[input][clé]+"' style='background-color: #D8D8D8; border: none;' '>"+
+              "<button class='btn-default card-img-top d-flex align-items-center border-secondary rounded shadow-sm' data-toggle='tooltip' data-placement='top' title='"+catalogue2[input][clé]+"' style='background-color: #D8D8D8; border: none;' '>"+
                   "<div>"+
 
                     "<img class='img-fluid' src="+  valeur[2]+ " style='width: 50px;height: 50px;padding :10px' alt='Card image cap'>"+
@@ -100,7 +93,6 @@ good_map.forEach(function(valeur, clé) {
                             "<svg height='50' width='70'><circle id="+ 'id'+i+" cx='40' cy='25' r='10'  stroke-width='3' fill="+ valeur[1] +" /></svg>"+
               "</button>"+
             "</div>"
-          console.log("MDR")
 
   indic = indic + next_indic
   i++;
@@ -125,7 +117,7 @@ indic += "<div class='row' >"
 warning_map.forEach(function(valeur, clé) {
           next_indic = 
             "<div class='col-md-6 col-lg-6 col-12' style='margin-bottom:15px;margin-top:15px;'>"+
-              "<button class='btn-default card-img-top d-flex align-items-center border-secondary rounded shadow-sm' data-toggle='tooltip' data-placement='top' title='"+catalogue[input][clé]+"' style='background-color: #D8D8D8; border: none;' '>"+
+              "<button class='btn-default card-img-top d-flex align-items-center border-secondary rounded shadow-sm' data-toggle='tooltip' data-placement='top' title='"+catalogue2[input][clé]+"' style='background-color: #D8D8D8; border: none;' '>"+
                   "<div>"+
                     "<img class='img-fluid' src="+  valeur[2]+ " style='width: 50px;height: 50px;padding :10px' alt='Card image cap'>"+
                   "</div>"+
@@ -163,7 +155,6 @@ document.getElementById("main1").appendChild(node2);
 
  voisin = "<br><br><h2 style='text-align: center'> Quelques communes semblables </h1><br>"
     catalogue[input]['Proche_voisin'].forEach(function(valeur) {
-      console.log(valeur)
       next_voisin =  
           "<div class='row justify-content-center'>"+
               "<div class='col-sm-12 col-md-8 d-flex align-items-center border-secondary rounded shadow-sm' style='margin:10px;background-color: #D8D8D8' '>"+
@@ -190,7 +181,9 @@ document.getElementById("main1").appendChild(node2);
     })
 
 document.getElementById("main2").innerHTML = voisin
- top = document.getElementById("main2");
+ 
+
+top = document.getElementById("main3");
 
 fetch("https://api-adresse.data.gouv.fr/search/?q="+input+"&type=street")
   .then(response => response.json())

@@ -1,11 +1,11 @@
-	[placeholder] {
-		color: white;
-	}
-	input::-webkit-input-placeholder {
-		color: white !important;
-		text-transform: uppercase;
-		font-size: 25px;
-	}
+[placeholder] {
+	color: white;
+}
+input::-webkit-input-placeholder {
+	color: white !important;
+	text-transform: uppercase;
+	font-size: 25px;
+}
 
 
 #foot{
@@ -22,6 +22,7 @@ body
  {
      background-repeat: no-repeat;	
      background-size: cover;
+     background-attachment: scroll;
  }
 
 .bg-light {
