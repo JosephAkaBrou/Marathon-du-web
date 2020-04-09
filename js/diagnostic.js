@@ -156,11 +156,11 @@ document.getElementById("warning_diagno").innerHTML = indic
 
 
 top.innerHTML += "<br><div class='col-sm-4 text-center'style='width: 21.5em;margin:15px auto;'>"+
-"<button type='button' class='btn btn-lg btn-success' onclick='demoFromHTML()'>Télécharger l'export PDF </button></div>"
+"<a href='javascript:demoFromHTML()'><button type='button' class='btn btn-lg btn-success'>Télécharger l'export PDF </button></a></div>"
 
 
 var node2 = document.createElement("div");  
-var node3 = document.createElement("div")
+var node3 = document.createElement("div");
 node2.setAttribute("class","row")
 node3.setAttribute("id","predict")
 node3.setAttribute("class","card")               // Create a <li> node
