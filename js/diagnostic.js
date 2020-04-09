@@ -73,17 +73,20 @@ next_indic =
 
 console.log(warning_map.size)
 console.log(good_map.size)
- top.innerHTML += "<br><h3 style='text-align: center'> L'essentiel </h3><br>"
+ //top.innerHTML += 
     var good_node = document.createElement("div");                 // Create a <li> node
-    good_node.setAttribute("class","row container-fluid bg-light")
+    good_node.setAttribute("class","container-fluid bg-light")
     good_node.setAttribute("id","good_diagno")         // Create a text node
                               // Append the text to <li>
 document.getElementById("main1").appendChild(good_node); 
 
+indic = "<br><h3> L'essentiel </h3><br>"
+indic += "<div class='row' >"
+
 good_map.forEach(function(valeur, clé) {
 
           next_indic = 
-            "<div class='col-sm-4 ' style='margin-bottom:15px;margin-top:15px;'>"+
+            "<div class='col-6' style='margin-bottom:15px;margin-top:15px;'>"+
               "<div class='card-img-top d-flex align-items-center border-secondary rounded shadow-sm' style='background-color: #D8D8D8' '>"+
                   "<div>"+
                     "<img class='img-fluid' src="+  valeur[1]+ " style='width: 50px;height: 50px;padding :10px' alt='Card image cap'>"+
@@ -97,19 +100,26 @@ good_map.forEach(function(valeur, clé) {
   indic = indic + next_indic
   i++;
 })
+
+indic += "<div/>"
+
 document.getElementById("good_diagno").innerHTML = indic 
 
     var warning_diagno = document.createElement("div");                 // Create a <li> node
-    warning_diagno.setAttribute("class","row container-fluid bg-light")
+    warning_diagno.setAttribute("class","container-fluid bg-light")
     warning_diagno.setAttribute("id","warning_diagno")         // Create a text node
                               // Append the text to <li>
-top.innerHTML  += "<br><br><h3 style='text-align: center'> Mes pistes d'action </h3><br><br>"
+
 document.getElementById("main1").appendChild(warning_diagno);
 
-indic = ""
+
+
+indic = "<br><br><h3> Mes pistes d'action </h3><br>"
+indic += "<div class='row' >"
+
 warning_map.forEach(function(valeur, clé) {
           next_indic = 
-            "<div class='col-sm-4 ' style='margin-bottom:15px;margin-top:15px;'>"+
+            "<div class='col-6' style='margin-bottom:15px;margin-top:15px;'>"+
               "<div class='card-img-top d-flex align-items-center border-secondary rounded shadow-sm' style='background-color: #D8D8D8' '>"+
                   "<div>"+
                     "<img class='img-fluid' src="+  valeur[1]+ " style='width: 50px;height: 50px;padding :10px' alt='Card image cap'>"+
@@ -122,11 +132,13 @@ warning_map.forEach(function(valeur, clé) {
   i++;
 })
 
+indic += "<div/>"
+
 
 document.getElementById("warning_diagno").innerHTML = indic 
 
 
-top.innerHTML += "<br><br><div class='col-sm-4 text-center'style='width: 21.5em;margin:15px auto;'>"+
+top.innerHTML += "<br><div class='col-sm-4 text-center'style='width: 21.5em;margin:15px auto;'>"+
 "<button type='button' class='btn btn-lg btn-success'>Télécharger l'export PDF </button></div>"
 
 top.innerHTML += "<br><br><h2 style='text-align: center'> Quelques communes semblables </h1><br><br>"
