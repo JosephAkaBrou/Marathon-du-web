@@ -10,7 +10,7 @@
 
  function check_input(){
   input = document.getElementById('research').value
-    if(input.length > 1 | input.value == "undefined"){
+    if(com.includes(input)){
       getDiagnost(input)
     }else{
      
