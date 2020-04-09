@@ -13,8 +13,10 @@
 		var top = document.getElementById("main1");
       var nested = document.getElementById("form1");
 
+      var navbar = document.getElementById('')
+
        top.removeChild(nested); 
-       top.innerHTML = "<br><h1 style='text-align: center'>Diagnostic de "+ input +"</h1><br><br>"
+      top.innerHTML = "<br><a href='index.html'><img src='https://www.atlasante.fr/media/site/gen/atlasante/logo-atla-sant-long@2x.png' ></a><h1 style='text-align: center'>Diagnostic de "+ input +"</h1><br><br>"
   
   console.log(" LOL " + Math.random() + Math.random())
 indic = "<br><br>"
@@ -161,16 +163,16 @@ document.getElementById("main1").appendChild(node2);
     catalogue[input]['Proche_voisin'].forEach(function(valeur) {
       console.log(valeur)
       next_voisin =  
-          "<div class='row'>"+
-              "<div class='card-img-top d-flex align-items-center border-secondary rounded shadow-sm' style='margin:10px;background-color: #D8D8D8' '>"+
-                  "<div class='col-3'>"+
+          "<div class='row justify-content-center'>"+
+              "<div class='col-8 d-flex align-items-center border-secondary rounded shadow-sm' style='margin:10px;background-color: #D8D8D8' '>"+
+                  "<div class='col-4'>"+
                     "<p class='p-3 m-0 font-weight-bold'>  "+ valeur + "</p>"+
                   "</div>"+
-                  "<div class='col-3'>"+
+                  "<div class='col-4'>"+
                     "<p class='p-3 m-0'>  "+ catalogue[valeur]['nom_departement'] + "</p>"+
                   "</div>"+
 
-                  "<div class='col offset-4'> "+
+                  "<div class='col-4'> "+
                     "<button class='col p-1 m-2 btn btn-lg btn-info' onClick='getDiagnost('"+valeur+"')'>Diagnostic</button>"+
                   "</div>"+
 
