@@ -73,7 +73,7 @@ next_indic =
 
 console.log(warning_map.size)
 console.log(good_map.size)
- top.innerHTML += "<br><h3 style='text-align: center'> Positif </h3><br>"
+ top.innerHTML += "<br><h3 style='text-align: center'> L'essentiel </h3><br>"
     var good_node = document.createElement("div");                 // Create a <li> node
     good_node.setAttribute("class","row container-fluid bg-light")
     good_node.setAttribute("id","good_diagno")         // Create a text node
@@ -103,7 +103,7 @@ document.getElementById("good_diagno").innerHTML = indic
     warning_diagno.setAttribute("class","row container-fluid bg-light")
     warning_diagno.setAttribute("id","warning_diagno")         // Create a text node
                               // Append the text to <li>
-top.innerHTML  += "<br><br><h3 style='text-align: center'> Axe d'amélioration </h3><br><br>"
+top.innerHTML  += "<br><br><h3 style='text-align: center'> Mes pistes d'action </h3><br><br>"
 document.getElementById("main1").appendChild(warning_diagno);
 
 indic = ""
@@ -129,7 +129,7 @@ document.getElementById("warning_diagno").innerHTML = indic
 top.innerHTML += "<br><br><div class='col-sm-4 text-center'style='width: 21.5em;margin:15px auto;'>"+
 "<button type='button' class='btn btn-lg btn-success'>Télécharger l'export PDF </button></div>"
 
-top.innerHTML += "<br><br><h2 style='text-align: center'> Mes communes semblables</h1><br><br>"
+top.innerHTML += "<br><br><h2 style='text-align: center'> Quelques communes semblables </h1><br><br>"
 var node2 = document.createElement("div");  
 var node3 = document.createElement("div")
 node2.setAttribute("class","row")
@@ -158,9 +158,13 @@ document.getElementById("main1").appendChild(node2);
                     "<p class='p-3 m-0'>  "+ catalogue[valeur]['nom_departement'] + "</p>"+
                   "</div>"+
 
+                  "<div class='col offset-4'> "+
+                    "<button class='col p-1 m-2 btn btn-lg btn-info' onClick='getDiagnost('"+valeur+"')'>Diagnostic</button>"+
+                  "</div>"+
+
+//<div class="col-sm-4 text-center" style="width: 21.5em;margin:15px auto;"><button type="button" class="btn btn-lg btn-success">Télécharger l'export PDF </button></div>
 
                   "<span class='dot' style ='background-color:green'></span>"+
-
               "</div>"+
           "</div>"+
       "<div>"+
