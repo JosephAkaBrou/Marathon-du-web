@@ -26,6 +26,7 @@
 
        //top.removeChild(nested); 
        top.innerHTML = ""
+      top.innerHTML += '<a href="index.html"><img src="icone/logo.png"></a>' 
       top.innerHTML = "<br><h1 style='text-align: center'>Diagnostic de "+ input +"</h1><br><br>"
   
 indic = "<br><br>"
