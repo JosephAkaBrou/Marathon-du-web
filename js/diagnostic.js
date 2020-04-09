@@ -1,3 +1,10 @@
+     function topFunction() {
+  document.body.scrollTop = 0; // For Safari
+  document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+}
+
+
+
  function check_input(){
   input = document.getElementById('research').value
     if(input.length > 1 | input.value == "undefined"){
@@ -10,15 +17,26 @@
  }           
 	function getDiagnost(input){
 		var top = document.getElementById("main1");
-      var nested = document.getElementById("form1");
+      //var nested = document.getElementById("form1");
 
-      var navbar = document.getElementById('')
+      //var navbar = document.getElementById('')
 
-       top.removeChild(nested); 
-      top.innerHTML = "<br><a href='index.html'><img src='https://www.atlasante.fr/media/site/gen/atlasante/logo-atla-sant-long@2x.png' ></a><h1 style='text-align: center'>Diagnostic de "+ input +"</h1><br><br>"
+       //top.removeChild(nested); 
+       top.innerHTML = ""
+      top.innerHTML = "<br><h1 style='text-align: center'>Diagnostic de "+ input +"</h1><br><br>"
   
 indic = "<br><br>"
 i = 0
+
+
+
+
+condition_tab= [catalogue[input].RFM16,catalogue[input].TN16,catalogue[input].PPMsD16,
+                catalogue[input].NSP19,catalogue[input].DP16,catalogue[input].PGP19,
+                catalogue[input]['PGP19_>60'],catalogue[input].PC16_15_24,catalogue[input].PC16_24_64,
+                catalogue[input]['PPop16_<18'],catalogue[input]['PPop16_>65'],catalogue[input].PRP16]
+
+
 condition_tab = [Math.random(),Math.random(),Math.random(),Math.random(),Math.random(),
 Math.random(),Math.random(),Math.random(),Math.random(),
 Math.random(),Math.random(),Math.random()]
@@ -29,7 +47,7 @@ indicators.forEach(function(elem) {
       list = []
       statut = "grey"
       condition = condition_tab[i]
-      if (condition >  0.3) {
+      if (condition >  seuil_values.get(elem)) {
         statut = "green"
         } else {
             statut = "orange"
@@ -155,6 +173,7 @@ document.getElementById("main1").appendChild(node2);
 
  voisin = "<br><br><h2 style='text-align: center'> Quelques communes semblables </h1><br>"
     catalogue[input]['Proche_voisin'].forEach(function(valeur) {
+      check = "getDiagnost('"+valeur+"');topFunction();"
       next_voisin =  
           "<div class='row justify-content-center'>"+
               "<div class='col-sm-12 col-md-8 d-flex align-items-center border-secondary rounded shadow-sm' style='margin:10px;background-color: #D8D8D8' '>"+
@@ -166,7 +185,7 @@ document.getElementById("main1").appendChild(node2);
                   "</div>"+
 
                   "<div class='col-4'> "+
-                    "<button class='col p-1 m-2 btn btn-lg btn-info' onClick='getDiagnost('"+valeur+"')'>Diagnostic</button>"+
+                    "<button class='col p-1 m-2 btn btn-lg btn-info' onClick="+check+">Diagnostic</button>"+
                   "</div>"+
 
 //<div class="col-sm-4 text-center" style="width: 21.5em;margin:15px auto;"><button type="button" class="btn btn-lg btn-success">Télécharger l'export PDF </button></div>
