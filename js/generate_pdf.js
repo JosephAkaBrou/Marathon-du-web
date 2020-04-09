@@ -1,10 +1,10 @@
 function demoFromHTML() {
-	var img = 'icone/Rapports/theme1.jfif'
+	var img = 'icone/Rapports/theme1.jpeg'
 	var doc = new jsPDF()
 
 	doc.setFontSize(40)
 	doc.text(35, 25, 'Rapport' + input)
-	doc.addImage(img, 'jpg', 15, 40, 180, 160)
+	doc.addImage(img, 'jpeg', 15, 40, 180, 160)
 
 	//generatePDF(img);
 	doc.save('Rapport.pdf');
