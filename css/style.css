@@ -7,51 +7,21 @@
 		font-size: 25px;
 	}
 
-#foot{    
-position: absolute;
-bottom: 0;
-width: 100%;
-background-color: lightgrey;
+
+#foot{
+    position: relative;
+    text-align: center;
 }
+
 #divfoot{
-    
-    width:80%;
-    
+   bottom:0;
+   width:100%;
 }
 
-[placeholder] {
-    color: white;
-}
-input::-webkit-input-placeholder {
-    color: white !important;
-    text-transform: uppercase;
-    font-size: 25px;
-}
-
-.img-responsive{
-    position: relative;
-    margin-left: auto;
-    margin-right: auto;
-    width: 30%;
-    height: 10%;
-}
-#slogan{
-    margin: 1%;
-}
-
-body{
-    min-height: 100vh;
-    width: auto;    
-    position: relative;
-    padding-bottom:10%;
-    background-image:url("../icone/bg.jpg");
-    background-attachment: fixed;
-    background-size: 100% 100%;
-}
-
-a, a:hover, a:focus, a:active {
-      text-decoration: none;
-      color: inherit;
+body
+ {
+     background-repeat: no-repeat;	
+     background-size: cover;
  }
 
 .bg-light {
