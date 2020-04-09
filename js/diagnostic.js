@@ -13,8 +13,10 @@
 		var top = document.getElementById("main1");
       var nested = document.getElementById("form1");
 
+      var navbar = document.getElementById('')
+
        top.removeChild(nested); 
-       top.innerHTML = "<br><a href='index.html'><img src='https://www.atlasante.fr/media/site/gen/atlasante/logo-atla-sant-long@2x.png' ></a><h1 style='text-align: center'>Diagnostic de "+ input +"</h1><br><br>"
+      top.innerHTML = "<br><a href='index.html'><img src='https://www.atlasante.fr/media/site/gen/atlasante/logo-atla-sant-long@2x.png' ></a><h1 style='text-align: center'>Diagnostic de "+ input +"</h1><br><br>"
   
   console.log(" LOL " + Math.random() + Math.random())
 indic = "<br><br>"
@@ -36,13 +38,15 @@ indicators.forEach(function(elem) {
       }
       
       if (statut == 'red' | statut == 'orange') {
-        list = [statut,icones.get(elem)]
-        warning_map.set(ind_names.get(elem),list)
+        list = [ind_names.get(elem),statut,icones.get(elem)]
+        warning_map.set(elem,list)
       }      
       if (statut == "green") {
-        list = [statut,icones.get(elem)]
-        good_map.set(ind_names.get(elem),list)
+        list = [ind_names.get(elem),statut,icones.get(elem)]
+        good_map.set(elem,list)
       }
+
+console.log(good_map)
 
 /*
 
@@ -73,63 +77,75 @@ next_indic =
 
 console.log(warning_map.size)
 console.log(good_map.size)
- top.innerHTML += "<br><h3 style='text-align: center'> L'essentiel </h3><br>"
+ //top.innerHTML += 
     var good_node = document.createElement("div");                 // Create a <li> node
-    good_node.setAttribute("class","row container-fluid bg-light")
+    good_node.setAttribute("class","container-fluid bg-light")
     good_node.setAttribute("id","good_diagno")         // Create a text node
                               // Append the text to <li>
 document.getElementById("main1").appendChild(good_node); 
 
+indic = "<br><h3> L'essentiel </h3><br>"
+indic += "<div class='row' >"
+i=0
 good_map.forEach(function(valeur, clé) {
 
           next_indic = 
-            "<div class='col-sm-4 ' style='margin-bottom:15px;margin-top:15px;'>"+
-              "<div class='card-img-top d-flex align-items-center border-secondary rounded shadow-sm' style='background-color: #D8D8D8' '>"+
+            "<div class='col-md-6 col-lg-6 col-12' style='margin-bottom:15px;margin-top:15px;'>"+
+              "<button class='btn-default card-img-top d-flex align-items-center border-secondary rounded shadow-sm' data-toggle='tooltip' data-placement='top' title='"+catalogue[input][clé]+"' style='background-color: #D8D8D8; border: none;' '>"+
                   "<div>"+
-                    "<img class='img-fluid' src="+  valeur[1]+ " style='width: 50px;height: 50px;padding :10px' alt='Card image cap'>"+
+
+                    "<img class='img-fluid' src="+  valeur[2]+ " style='width: 50px;height: 50px;padding :10px' alt='Card image cap'>"+
                   "</div>"+
-                  "<p class='col p-2 m-0' text-center> "+ clé  + "</p>"+
-                            "<svg height='50' width='70'><circle id="+ 'id'+i+" cx='40' cy='25' r='10'  stroke-width='3' fill="+ valeur[0] +" /></svg>"+
-              "</div>"+
+                  "<p class='col p-2 m-0' text-center> "+ valeur[0]  + "</p>"+
+                            "<svg height='50' width='70'><circle id="+ 'id'+i+" cx='40' cy='25' r='10'  stroke-width='3' fill="+ valeur[1] +" /></svg>"+
+              "</button>"+
             "</div>"
           console.log("MDR")
 
   indic = indic + next_indic
   i++;
 })
+
+indic += "<div/>"
+
 document.getElementById("good_diagno").innerHTML = indic 
 
     var warning_diagno = document.createElement("div");                 // Create a <li> node
-    warning_diagno.setAttribute("class","row container-fluid bg-light")
+    warning_diagno.setAttribute("class","container-fluid bg-light")
     warning_diagno.setAttribute("id","warning_diagno")         // Create a text node
                               // Append the text to <li>
-top.innerHTML  += "<br><br><h3 style='text-align: center'> Mes pistes d'action </h3><br><br>"
+
 document.getElementById("main1").appendChild(warning_diagno);
 
-indic = ""
+
+
+indic = "<br><br><h3> Mes pistes d'action </h3><br>"
+indic += "<div class='row' >"
+
 warning_map.forEach(function(valeur, clé) {
           next_indic = 
-            "<div class='col-sm-4 ' style='margin-bottom:15px;margin-top:15px;'>"+
-              "<div class='card-img-top d-flex align-items-center border-secondary rounded shadow-sm' style='background-color: #D8D8D8' '>"+
+            "<div class='col-md-6 col-lg-6 col-12' style='margin-bottom:15px;margin-top:15px;'>"+
+              "<button class='btn-default card-img-top d-flex align-items-center border-secondary rounded shadow-sm' data-toggle='tooltip' data-placement='top' title='"+catalogue[input][clé]+"' style='background-color: #D8D8D8; border: none;' '>"+
                   "<div>"+
-                    "<img class='img-fluid' src="+  valeur[1]+ " style='width: 50px;height: 50px;padding :10px' alt='Card image cap'>"+
+                    "<img class='img-fluid' src="+  valeur[2]+ " style='width: 50px;height: 50px;padding :10px' alt='Card image cap'>"+
                   "</div>"+
-                  "<p class='col p-2 m-0' text-center> "+ clé  + "</p>"+
-                            "<svg height='50' width='70'><circle id="+ 'id'+i+" cx='40' cy='25' r='10'  stroke-width='3' fill="+ valeur[0] +" /></svg>"+
-              "</div>"+
+                  "<p class='col p-2 m-0' text-center> "+ valeur[0]  + "</p>"+
+                            "<svg height='50' width='70'><circle id="+ 'id'+i+" cx='40' cy='25' r='10'  stroke-width='3' fill="+ valeur[1] +" /></svg>"+
+              "</button>"+
             "</div>"
   indic = indic + next_indic
   i++;
 })
 
+indic += "<div/>"
+
 
 document.getElementById("warning_diagno").innerHTML = indic 
 
 
-top.innerHTML += "<br><br><div class='col-sm-4 text-center'style='width: 21.5em;margin:15px auto;'>"+
+top.innerHTML += "<br><div class='col-sm-4 text-center'style='width: 21.5em;margin:15px auto;'>"+
 "<button type='button' class='btn btn-lg btn-success'>Télécharger l'export PDF </button></div>"
 
-top.innerHTML += "<br><br><h2 style='text-align: center'> Quelques communes semblables </h1><br><br>"
 var node2 = document.createElement("div");  
 var node3 = document.createElement("div")
 node2.setAttribute("class","row")
@@ -145,20 +161,20 @@ document.getElementById("main1").appendChild(node2);
        
 
 
- voisin = ""
+ voisin = "<br><br><h2 style='text-align: center'> Quelques communes semblables </h1><br>"
     catalogue[input]['Proche_voisin'].forEach(function(valeur) {
       console.log(valeur)
       next_voisin =  
-          "<div class='row'>"+
-              "<div class='card-img-top d-flex align-items-center border-secondary rounded shadow-sm' style='margin:10px;background-color: #D8D8D8' '>"+
-                  "<div class='col-3'>"+
+          "<div class='row justify-content-center'>"+
+              "<div class='col-sm-12 col-md-8 d-flex align-items-center border-secondary rounded shadow-sm' style='margin:10px;background-color: #D8D8D8' '>"+
+                  "<div class='col-4'>"+
                     "<p class='p-3 m-0 font-weight-bold'>  "+ valeur + "</p>"+
                   "</div>"+
-                  "<div class='col-3'>"+
+                  "<div class='col-4'>"+
                     "<p class='p-3 m-0'>  "+ catalogue[valeur]['nom_departement'] + "</p>"+
                   "</div>"+
 
-                  "<div class='col offset-4'> "+
+                  "<div class='col-4'> "+
                     "<button class='col p-1 m-2 btn btn-lg btn-info' onClick='getDiagnost('"+valeur+"')'>Diagnostic</button>"+
                   "</div>"+
 

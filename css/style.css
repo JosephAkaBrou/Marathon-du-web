@@ -7,13 +7,16 @@
 		font-size: 25px;
 	}
 
-#foot{
-    position: relative;
-    text-align: center;
+#foot{    
+position: absolute;
+bottom: 0;
+width: 100%;
+background-color: lightgrey;
 }
 #divfoot{
-   bottom:0;
-   width:100%;
+    
+    width:80%;
+    
 }
 
 [placeholder] {
@@ -34,4 +37,23 @@ input::-webkit-input-placeholder {
 }
 #slogan{
     margin: 1%;
+}
+
+body{
+    min-height: 100vh;
+    width: auto;    
+    position: relative;
+    padding-bottom:10%;
+    background-image:url("../icone/bg.jpg");
+    background-attachment: fixed;
+    background-size: 100% 100%;
+}
+
+a, a:hover, a:focus, a:active {
+      text-decoration: none;
+      color: inherit;
+ }
+
+.bg-light {
+    background-color: #f8f9fa00!important;
 }
