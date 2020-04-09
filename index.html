@@ -9,7 +9,7 @@
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.3.2/jspdf.min.js"></script>
     <script type="text/javascript" src="js/generate_pdf.js"></script>
     <!-- PDF generator end -->
-    
+
     <link rel="stylesheet" href="css/autoC.css">
     <link rel="stylesheet" href="css/style.css">
     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
@@ -42,11 +42,12 @@
 				<br>
 						<img src="icone/logo.png">
                         <p>Des chiffres sur votre territoire ouvert à tous !</p>
-						
-						<div class="input-group mb-3">
-						<input type="text" autocomplete='off' id ="research" class="form-control form-control-lg text-center" placeholder="Diagnostiquer ma commune" style="text-transform: lowercase; font-size: 25px; color: white; background-color: #4cd964; border-top-left-radius: 25px;border-bottom-left-radius: 25px;">
-							<div class="input-group-append" >
-							<button id='google_like' class="btn btn-success" onClick='check_input()' type="submit" style="background-color:#4cd964; border: none; border-top-right-radius: 25px;border-bottom-right-radius: 25px;">Go</button>
+						<div class="row">
+							<div class="col-md-12 col-lg-8 offset-lg-2 input-group">
+							<input type="text" autocomplete='off' id ="research" class="form-control form-control-lg text-center" placeholder="Diagnostiquer ma commune" style="text-transform: lowercase; font-size: 25px; color: white; background-color: #4cd964; border-top-left-radius: 25px;border-bottom-left-radius: 25px;">
+								<div class="input-group-append" >
+								<button id='google_like' class="btn btn-success" onClick='check_input()' type="submit" style="background-color:#4cd964; border: none; border-top-right-radius: 25px;border-bottom-right-radius: 25px;">Go</button>
+								</div>
 							</div>
 						</div>
 					</div>
@@ -61,7 +62,8 @@
 
 		</div>
 
-
+		<div id="export_pdf" style="display: none;"><img src="icone\rapports\theme1.jfif">
+		</div>
 
 		
 
