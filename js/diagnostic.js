@@ -156,7 +156,7 @@ document.getElementById("warning_diagno").innerHTML = indic
 
 
 top.innerHTML += "<br><div class='col-sm-4 text-center'style='width: 21.5em;margin:15px auto;'>"+
-"<button type='button' class='btn btn-lg btn-success'>Télécharger l'export PDF </button></div>"
+"<button type='button' class='btn btn-lg btn-success'> <a href='javascript:demoFromHTML()'' class='button'>Télécharger l'export PDF </a></div>"
 
 var node2 = document.createElement("div");  
 var node3 = document.createElement("div")
