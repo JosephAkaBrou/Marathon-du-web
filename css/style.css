@@ -17,3 +17,13 @@
    bottom:0;
    width:100%;
 }
+
+body
+ {
+     background-repeat: no-repeat;	
+     background-size: cover;
+ }
+
+.bg-light {
+    background-color: #f8f9fa00!important;
+}
