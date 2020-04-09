@@ -38,13 +38,15 @@ indicators.forEach(function(elem) {
       }
       
       if (statut == 'red' | statut == 'orange') {
-        list = [statut,icones.get(elem)]
-        warning_map.set(ind_names.get(elem),list)
+        list = [ind_names.get(elem),statut,icones.get(elem)]
+        warning_map.set(elem,list)
       }      
       if (statut == "green") {
-        list = [statut,icones.get(elem)]
-        good_map.set(ind_names.get(elem),list)
+        list = [ind_names.get(elem),statut,icones.get(elem)]
+        good_map.set(elem,list)
       }
+
+console.log(good_map)
 
 /*
 
@@ -84,18 +86,19 @@ document.getElementById("main1").appendChild(good_node);
 
 indic = "<br><h3> L'essentiel </h3><br>"
 indic += "<div class='row' >"
-
+i=0
 good_map.forEach(function(valeur, clé) {
 
           next_indic = 
             "<div class='col-md-6 col-lg-6 col-12' style='margin-bottom:15px;margin-top:15px;'>"+
-              "<div class='card-img-top d-flex align-items-center border-secondary rounded shadow-sm' style='background-color: #D8D8D8' '>"+
+              "<button class='btn-default card-img-top d-flex align-items-center border-secondary rounded shadow-sm' data-toggle='tooltip' data-placement='top' title='"+catalogue[input][clé]+"' style='background-color: #D8D8D8; border: none;' '>"+
                   "<div>"+
-                    "<img class='img-fluid' src="+  valeur[1]+ " style='width: 50px;height: 50px;padding :10px' alt='Card image cap'>"+
+
+                    "<img class='img-fluid' src="+  valeur[2]+ " style='width: 50px;height: 50px;padding :10px' alt='Card image cap'>"+
                   "</div>"+
-                  "<p class='col p-2 m-0' text-center> "+ clé  + "</p>"+
-                            "<svg height='50' width='70'><circle id="+ 'id'+i+" cx='40' cy='25' r='10'  stroke-width='3' fill="+ valeur[0] +" /></svg>"+
-              "</div>"+
+                  "<p class='col p-2 m-0' text-center> "+ valeur[0]  + "</p>"+
+                            "<svg height='50' width='70'><circle id="+ 'id'+i+" cx='40' cy='25' r='10'  stroke-width='3' fill="+ valeur[1] +" /></svg>"+
+              "</button>"+
             "</div>"
           console.log("MDR")
 
@@ -122,13 +125,13 @@ indic += "<div class='row' >"
 warning_map.forEach(function(valeur, clé) {
           next_indic = 
             "<div class='col-md-6 col-lg-6 col-12' style='margin-bottom:15px;margin-top:15px;'>"+
-              "<div class='card-img-top d-flex align-items-center border-secondary rounded shadow-sm' style='background-color: #D8D8D8' '>"+
+              "<button class='btn-default card-img-top d-flex align-items-center border-secondary rounded shadow-sm' data-toggle='tooltip' data-placement='top' title='"+catalogue[input][clé]+"' style='background-color: #D8D8D8; border: none;' '>"+
                   "<div>"+
-                    "<img class='img-fluid' src="+  valeur[1]+ " style='width: 50px;height: 50px;padding :10px' alt='Card image cap'>"+
+                    "<img class='img-fluid' src="+  valeur[2]+ " style='width: 50px;height: 50px;padding :10px' alt='Card image cap'>"+
                   "</div>"+
-                  "<p class='col p-2 m-0' text-center> "+ clé  + "</p>"+
-                            "<svg height='50' width='70'><circle id="+ 'id'+i+" cx='40' cy='25' r='10'  stroke-width='3' fill="+ valeur[0] +" /></svg>"+
-              "</div>"+
+                  "<p class='col p-2 m-0' text-center> "+ valeur[0]  + "</p>"+
+                            "<svg height='50' width='70'><circle id="+ 'id'+i+" cx='40' cy='25' r='10'  stroke-width='3' fill="+ valeur[1] +" /></svg>"+
+              "</button>"+
             "</div>"
   indic = indic + next_indic
   i++;

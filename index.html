@@ -5,7 +5,6 @@
 	<title>Atlasante</title>
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <link rel="stylesheet" href="css/autoC.css">
-    <link rel="stylesheet" href="css/style.css">
     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
 	<script type="text/javascript" src="js/indicators.js"></script>
@@ -14,7 +13,16 @@
     <script type="text/javascript" src="js/read_data.js"></script>
     <script src="js/jquery.smart_autocomplete.js" type="text/javascript"></script>
 </head>
-
+<style type="text/css">
+	[placeholder] {
+		color: white;
+	}
+	input::-webkit-input-placeholder {
+		color: white !important;
+		text-transform: uppercase;
+		font-size: 25px;
+	}
+</style>
 <body class="" onload="loadData()">	<section class="container">
 		<!--header start-->
 	    <header class="header white-bg">
@@ -59,9 +67,12 @@
 		</div>
 
 
-        <div id = "divfoot">
-            <p id="foot"> Visitez notre <a href="https://github.com/JojoAkaBrou/Mdw">GitHub</a></p>
-        </div>
+
+		<footer class="text-center mastfoot mt-auto fixed-bottom">
+			<div class="inner">
+			<p> Visitez notre <a href="https://github.com/JojoAkaBrou/Mdw">GitHub</a></p>
+			</div>
+		</footer>
 
 	</section>
         <script type="text/javascript" src="js/autoC.js"></script>
