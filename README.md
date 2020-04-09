@@ -57,4 +57,5 @@ Nouveaux noms de variables
   
 # Visualisation de données 
 ## Choix des seuils pour les indicateurs 
-## Les communes les plus proches entres elles (https://code.i-harness.com/fr/docs/scikit_learn/modules/neighbors)
+## Les communes les plus proches entres elles 
+(https://code.i-harness.com/fr/docs/scikit_learn/modules/neighbors)
