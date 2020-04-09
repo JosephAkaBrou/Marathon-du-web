@@ -13,7 +13,7 @@ Dans le cadre de notre Master Miashs, nous avons eu l'occasion de participer à 
   - Clément Cisterne
   
  <b> Master CNO</b>
-  - Joacquim Fischer
+  - Joachim Fischer
   - Margaux
   - Thibault
 # Liens utiles
