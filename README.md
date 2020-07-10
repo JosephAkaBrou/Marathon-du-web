@@ -20,20 +20,7 @@ Dans le cadre de notre Master Miashs, nous avons eu l'occasion de participer à 
   - Drive : https://drive.google.com/drive/folders/15QzOnYuNrrp2V2qsbVLqoXLeMyc4SUjw
   - Lien du site : https://jojoakabrou.github.io/Mdw/
 
-# Lancement du projet
-## Découverte de l'équipe
-  
-## Organisation
-
-## Prise de contact avec les commanditaires 
-
-# Conception d'un jeu de données
-
-## Exploration des données
-
-## Sélection des indicateurs clés (constitution d’une liste)
-
-## Extraction des données en csv
+## Listes des données extraites en csv
 Nouveaux noms de variables
   - Code > *Code*
   - Libellé > *Nom_com*
@@ -51,11 +38,3 @@ Nouveaux noms de variables
   - Part du nombre de résidences principales en HLM 2016 > *PNRP16*
 
 
-# Développement d'un tableau de bord
-## Maquettage de l'applicatif
-## Récupération et adaptation d'un template
-  
-# Visualisation de données 
-## Choix des seuils pour les indicateurs 
-## Les communes les plus proches entres elles 
-(https://code.i-harness.com/fr/docs/scikit_learn/modules/neighbors)
