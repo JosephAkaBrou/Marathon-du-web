@@ -18,7 +18,7 @@ Dans le cadre de notre Master Miashs, nous avons eu l'occasion de participer à 
   - Thibault
 # Liens utiles
   - Drive : https://drive.google.com/drive/folders/15QzOnYuNrrp2V2qsbVLqoXLeMyc4SUjw
-  - Lien du site : https://jojoakabrou.github.io/Mdw/
+  - Lien du site : https://JosephAkaBrou.github.io/Mdw/
 
 ## Listes des données extraites en csv
 Nouveaux noms de variables
