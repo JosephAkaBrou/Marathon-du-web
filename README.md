@@ -1,6 +1,6 @@
 # Marathon du web
 
-Dans le cadre de notre Master Miashs, nous avons eu l'occasion de participer à une semaine de marathon du web. Notre exercice a consisté à développer un applicatif simplifiant la data visualisation de données provenant des sites C@rtosanté, Sirsé et Insee. Pour mener à bien ce travail, nous avons fait équipe avec des élève du Master CNO qui nous ont épaulés dans la conception de l'applicatif.
+Dans le cadre de notre Master Miashs, nous avons eu l'occasion de participer à une semaine de marathon du web. Notre exercice a consisté à développer un applicatif simplifiant la data visualisation de données provenant des sites C@rtosanté, Sirsé et Insee. Pour mener à bien ce travail, nous avons fait équipe avec des élèves du Master CNO qui nous ont épaulés dans la conception de l'applicatif.
 
 # Participation
 
